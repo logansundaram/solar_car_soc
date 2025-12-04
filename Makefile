@@ -16,6 +16,7 @@ $(TARGET): $(OBJ)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+
 release: CXXFLAGS := -std=c++17 -O3 -DNDEBUG
 release: clean $(TARGET)
 	@echo "Built release version."
